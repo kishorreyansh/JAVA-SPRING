@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean name="emp1" class="org.springcore.collections.Employee" >
+        <property name="name" value="Ridhansh" />
+
+        <property name="phones" >
+            <list>
+                <value>1234567</value>
+                <value>2345678</value>
+                <value>1234567</value>
+            </list>
+        </property>
+
+        <property name="addresses" >
+            <set>
+                <value>Kansas</value>
+                <value>Missouri</value>
+                <value>Kansas</value>
+            </set>
+        </property>
+        <property name="courses">
+            <map>
+                <entry key="java" value="2months" />
+                <entry key="react" value="1.5months"/>
+            </map>
+        </property>
+    </bean>
+</beans>
