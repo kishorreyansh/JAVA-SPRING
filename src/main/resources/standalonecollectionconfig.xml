@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/util
+           http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- standalone List Collection -->
+    <util:list list-class="java.util.LinkedList" id="friendslist">
+        <value>Reyansh</value>
+        <value>Ridhansh</value>
+        <value>Kishor</value>
+    </util:list>
+
+    <!-- Standalone Map Collection -->
+    <util:map map-class="java.util.HashMap" id="fees" >
+        <entry key="JAVA" value="10000" />
+        <entry key="React" value="8000" />
+        <entry key="Spring" value="20000" />
+    </util:map>
+    <!-- Standalone Properties Collection -->
+    <util:properties id="dbproperties">
+        <prop key="dbname">MYSQL</prop>
+        <prop key="dbusername">root</prop>
+        <prop key="dbpassword">root</prop>
+    </util:properties>
+
+    <bean class="org.springcore.standalone.collections.Person" name="bestfriends">
+        <property name="friends" >
+            <ref bean="friendslist" />
+        </property>
+        <!-- <ref bean="friendslist ref="friendslist" /> -->
+        <property name="feestructure" >
+            <ref bean="fees" />
+        </property>
+        <property name="properties">
+            <ref bean="dbproperties" />
+        </property>
+    </bean>
+</beans>
