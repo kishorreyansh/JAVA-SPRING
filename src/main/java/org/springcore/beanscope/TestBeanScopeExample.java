@@ -15,7 +15,7 @@ public class TestBeanScopeExample {
 
         Teacher teacher2 = context.getBean("obj", Teacher.class);
         System.out.println("Teacher2 Hashcode: "+teacher2.hashCode());
-        System.out.println("___________________________________________________");
+        System.out.println("_____________________________________________________");
 
         Professor prof1 = context.getBean("prof", Professor.class);
         System.out.println("Professor Hashcode: "+prof1.hashCode());

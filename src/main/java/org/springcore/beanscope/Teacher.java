@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component("obj")
 @Scope("prototype")
+
 public class Teacher {
 
     @Value("JAVA")
