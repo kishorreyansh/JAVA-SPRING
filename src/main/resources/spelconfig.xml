@@ -11,11 +11,6 @@
            http://www.springframework.org/schema/util
            http://www.springframework.org/schema/util/spring-util.xsd">
 
-        <context:component-scan base-package="org.springcore.beanscope" />
-
-
-        <bean class="org.springcore.beanscope.Professor" name="prof" scope="prototype" />
-
-
+        <context:component-scan base-package="org.springcore.spel" />
 
 </beans>
